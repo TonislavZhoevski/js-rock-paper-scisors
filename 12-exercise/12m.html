@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function addNum(array, num) {
+            // When there is only 1 parameter,
+            // the brackets are optional. So we
+            // can also write: value => value + num
+            return array.map((value) => value + num);
+        }
+
+        console.log(addNum([1,2,3], 2));
+        console.log(addNum([-2,-1, 0, 99 ], 2));
+
+        const numbers = [1,2,3,4];
+        const doubled = numbers.map( num => num * 2);
+        console.log(doubled);
+
+        const users = [
+            { name: 'Alice', age: 25 },
+            { name: 'Bob', age: 30 },
+            { name:'Charlie', age: 35 }
+        ];
+
+        const names = users.map(user => user.name);
+        console.log(names);
+
+        const cars = ['Mercedes', 'BMW', 'Audi', 'VolksWagen'];
+        const sold = [10,5,7,3];
+
+        const soldCars = cars.map((car, index) => `${car} is ${sold[index]} time sold`);
+
+        console.log(soldCars);
+
+        const players = [
+            { name: 'c. Ronaldo', age: 39 },
+            { name: 'Leo Messi', age: 36 },
+            { name: 'Neymar', age: 32 }
+        ];
+
+        const playerInfo = players.map(player => `${player.name}, age: ${player.age}`);
+
+        console.log(playerInfo);
+
+    </script>
+</body>
+</html>

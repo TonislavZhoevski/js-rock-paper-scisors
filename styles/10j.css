@@ -1,0 +1,34 @@
+body {
+    background-color: black;
+}
+.gray-button {
+    background-color: rgb(51, 51, 51);
+    font-size: 27px;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-right: 5px;
+}
+
+.clear-button {
+    background-color: rgb(51, 51, 51);
+    font-size: 17px;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.calculate-button {
+    background-color: rgb(254, 160, 10);
+    font-size: 27px;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-right: 5px;
+}

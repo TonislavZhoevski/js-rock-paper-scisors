@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function removeEgg(foods) {
+            const result = [];
+            let eggsRemoved = 0;
+
+            for (let i = 0; i < foods.length; i++) {
+                // Only skip 'egg' if we removed less than 2
+                // of them so far.
+                if (foods[i] === 'egg' && eggsRemoved < 2) {
+                    // Update the number of 'egg' we have removed.
+                    // This must be done before continue, otherwise,
+                    // doing continue first will just skip this code.
+                    eggsRemoved++; // First update
+                    continue; // Second/next update
+                    // The if statement defines what the rule is,
+                    // the update statement could change itself
+                    // one after other and been multiple changes
+                }
+                
+                result.push(foods[i]); // What to return, after IF-statement
+            }
+
+            return result; // What to return after the for loop
+        }
+
+        console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Document</title>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                gap: 0;
+            }
+            
+            #main-header {
+                text-align: center;
+                height: 120px;
+            }
+
+            .js-button {
+                margin-right: 84px;
+                font-family: Arial;
+                font-size: 18px;
+                padding: 10px 20px;
+                background-color: rgb(150, 180, 180);
+                color: rgb(20, 19, 19);
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            .js-button:hover {
+                background-color: rgb(228, 238, 238);
+                padding: 12px 22px;
+            }
+
+            .card-title {
+                width: 480px;
+                padding: 8px;
+                background-color: gray;
+                color: rgb(240, 236, 233);
+                font-size: 24px;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+
+            .card-description {
+                width: 480px;
+                height: 96px;
+                padding: 8px;
+                background-color: rgb(224, 224, 224);
+                color:rgb(25, 27, 27);
+
+            }
+        </style>
+    </head>
+    <body>
+            <header id="main-header">
+                <button class="js-button">Shippers</button>
+                <button class="js-button">Forwarders</button>
+                <button class="js-button">Carriers</button>
+            </header>
+            <div>
+                <h3 class="card-title">Card 1</h3>
+                <p class=" card-description">Description of card 1.</p>
+            </div>
+            <div>
+                <h3 class="card-title">Card 1</h3>
+                <p class=" card-description">Description of card 1.</p>
+            </div>
+        <p class="js-text"></p>
+        <script>
+            function removeEgg(foods) {
+                let eggsRemoved = 0;
+
+                return foods.filter((food) => {
+                    // If the food is 'egg', we should return false
+                    // but only if we haven't removed 2 eggs already.
+                    if (food === 'egg' && eggsRemoved < 2) {
+                        eggsRemoved++;
+                        return false;
+                    }
+
+                    return true;
+                });
+            }
+
+            console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+           /*
+            function displayInfo(name, age, isStudent, hobbies) {
+            const paragraph = document.querySelector('.js-text');
+
+            const studentStatus = isStudent ? 'Yes' : 'No';
+            const infoHTML = `
+                <p>Name: ${name}</p>
+                <p>Age: ${age}</p>
+                <p>Is Student: ${isStudent}</p>
+                <p>Hobbies: ${hobbies.join(', ')}</p>
+            `;
+
+            paragraph.innerHTML = infoHTML;
+           }
+
+           displayInfo('John', 25, true, ['reading', 'gaming']);
+            */
+        </script>
+    </body>
+</html>
